@@ -39,7 +39,7 @@ public class QUERYHBASEFSOLR {
        // SolrQuery query = new SolrQuery("id:000area-KgW7mg");
         SolrQuery query = new SolrQuery("HContent:我们");
         query.setStart(0); //数据起始行，分页用
-        query.setRows(300); //返回记录数，分页用
+        query.setRows(10); //返回记录数，分页用
         QueryResponse response = server.query(query);
         SolrDocumentList docs = response.getResults();
         System.out.println("文档个数：" + docs.getNumFound()); //数据总条数也可轻易获取
